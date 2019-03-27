@@ -1,0 +1,3 @@
+
+start-app:
+	flask run
