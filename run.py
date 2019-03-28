@@ -1,9 +1,10 @@
-from flask import Flask, render_template
-from flask_socketio import SocketIO
+from app import app, socketio
+from apps.foodApi.urls import api_urls
+from apps.foodWeb.urls import web_urls
 
-app = Flask(__name__)
-app.config.from_pyfile('config.py')
-socketio = SocketIO(app)
+app.register_blueprint(api_urls)
+app.register_blueprint(web_urls)
+
 
 if __name__ == '__main__':
-    socketio.run(app)
+    socketio.run(app, debug=True)

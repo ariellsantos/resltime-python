@@ -1,3 +1,3 @@
 
 start-app:
-	flask run
+	python3 run.py
