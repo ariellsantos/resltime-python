@@ -3,6 +3,9 @@ from apps.foodApi.validators  import validate
 
 
 def test_validate():
+    '''
+    Valida que el request cumple con las reglas descritas por el esquema
+    '''
     schema_request = {
         'name': "ariel"
     }
