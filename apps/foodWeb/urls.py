@@ -1,6 +1,7 @@
+#Url para la app foodWeb Encargada de mostrar la interfaz web
 from flask import Blueprint
 
-from .controller import index
+from .orders_controller import index
 
 web_urls = Blueprint('web_urls', __name__, url_prefix='/admin')
 
